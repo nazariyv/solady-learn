@@ -2,10 +2,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "forge-std/Test.sol";
-import "../src/Random.sol";
+import "./utils/SoladyTest.sol";
 
-contract CounterTest is Test {
+contract RandomTest is SoladyTest {
     function testRandom(uint256) public {
         vm.breakpoint('a');
         uint256 n = Random.random();

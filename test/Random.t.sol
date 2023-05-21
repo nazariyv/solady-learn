@@ -6,7 +6,7 @@ import "forge-std/Test.sol";
 import "../src/Random.sol";
 
 contract CounterTest is Test {
-    function testRandom() public {
+    function testRandom(uint256) public {
         vm.breakpoint('a');
         uint256 n = Random.random();
         emit log_uint(n);
@@ -16,7 +16,7 @@ contract CounterTest is Test {
         emit log_uint(n);
     }
 
-    function testRandomBytes() public {
+    function testRandomBytes(uint256) public {
         bytes memory b = Random.randomBytes();
         emit log_bytes(b);
         b = Random.randomBytes();
